@@ -45,6 +45,21 @@ public class Main {
         Louis.setName("Louis");
         Louis.setSpeciality("Parsites");
 
+        /** Assignment Inheritance */
+        WetFood whiskas = new WetFood("Whiskas", 6,80 ,
+                new Date(System.currentTimeMillis()+1000*60*60*24*10),80);
+        AnimalFood catFood = new SolidFood("Seaside", 44,500 ,
+                new Date(System.currentTimeMillis()+1000*60*60*24*50),20);
+        SolidFood scoobySnack = new SolidFood("Scooby-Snack",999,1,new Date(System.currentTimeMillis()+1000*60*60*24*90),1)
+        RecreationalActivity swimPlay = new RecreationalActivity("Swimming");
+        RecreationalActivity huntGhost = new RecreationalActivity("Ghost Hunting");
+
+        Cat Tom = new Cat("Tom", 12, 8,
+                10,10,whiskas, mousePlay,"White");
+        Duck Bob = new Duck("Bob", 3,9,5,10,kibble2,swimPlay);
+
+        Dog Scooby = new Dog("Scooby-Doo",9,10,10,10,scoobySnack,huntGhost,"Big",40);
+
 
 
 
