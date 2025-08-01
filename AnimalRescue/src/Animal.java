@@ -17,4 +17,8 @@ public class Animal {
         this.prefferedFood = prefferedFood;
         this.prefferedActivity = prefferedActivity;
     }
+
+    public int getHealthLevel() {
+        return healthLevel;
+    }
 }
