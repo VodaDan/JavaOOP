@@ -19,6 +19,10 @@ public class Animal {
     }
     public Animal(){}
 
+    public void makeSound() {
+        System.out.println(this.name + " made a sound.");
+    }
+
     public int getHealthLevel() {
         return healthLevel;
     }

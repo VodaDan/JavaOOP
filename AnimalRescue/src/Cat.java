@@ -7,6 +7,11 @@ public class Cat extends Animal{
         this.furColor = furColor;
     }
 
+    @Override
+    public void makeSound(){
+        System.out.println(this.getName() + " the cat meowed");
+    }
+
     public String getFurColor() {
         return furColor;
     }

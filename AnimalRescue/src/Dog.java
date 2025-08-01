@@ -7,4 +7,28 @@ public class Dog extends Animal{
         this.size = size;
         this.weight = weight;
     }
+
+    public void makeSound(){
+        if(this.getWeight() > 30) {
+            System.out.println(this.getName() + " barked loudly!");
+        } else {
+            System.out.println(this.getName() + " barked!");
+        }
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
 }
