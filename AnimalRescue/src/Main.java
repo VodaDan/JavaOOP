@@ -23,7 +23,7 @@ public class Main {
         Veterinarian Louis = new Veterinarian();
 
         //      Setting values
-        kibble2.setName("Kibble Dog");
+        kibble2.setName("Kibble-Dog");
         kibble2.setExpirationDate(new Date(System.currentTimeMillis()+1000*60*60*24*60));
         kibble2.setPrice(40);
         kibble2.setQuantity(2500);
@@ -46,6 +46,7 @@ public class Main {
         Louis.setSpeciality("Parsites");
 
         /** Assignment Inheritance */
+
         WetFood whiskas = new WetFood("Whiskas", 6,80 ,
                 new Date(System.currentTimeMillis()+1000*60*60*24*10),80);
         AnimalFood catFood = new SolidFood("Seaside", 44,500 ,
@@ -54,11 +55,50 @@ public class Main {
         RecreationalActivity swimPlay = new RecreationalActivity("Swimming");
         RecreationalActivity huntGhost = new RecreationalActivity("Ghost Hunting");
 
-        Cat Tom = new Cat("Tom", 12, 8,
+        Cat tomTheCat = new Cat("Tom", 12, 8,
                 10,10,whiskas, mousePlay,"White");
-        Duck Bob = new Duck("Bob", 3,9,5,10,kibble2,swimPlay);
+        Duck bobTheDuck = new Duck("Bob", 3,9,5,10,kibble2,swimPlay);
 
-        Dog Scooby = new Dog("Scooby-Doo",9,10,10,10,scoobySnack,huntGhost,"Big",40);
+        Dog scoobyTheDog = new Dog("Scooby-Doo",9,10,10,10,scoobySnack,huntGhost,"Big",40);
+
+        /** Assignment Polymorphism */
+        Animal emptyAnimal = new Animal();
+
+        System.out.println("\n---------Making sound-------");
+        emptyAnimal.makeSound(); // Animal class
+        tomTheCat.makeSound(); // Cat class extended Animal
+        bobTheDuck.makeSound(); // Duck class extended Animal
+        scoobyTheDog.makeSound(); // Dog class extended Animal
+
+        System.out.println("\n---------Moving-------");
+        emptyAnimal.move();
+        tomTheCat.move();
+        bobTheDuck.move();
+        scoobyTheDog.move();
+
+        System.out.println("\n---------Defending-------");
+        emptyAnimal.defend();
+        tomTheCat.defend();
+        bobTheDuck.defend();
+        scoobyTheDog.defend();
+
+        System.out.println("\n---------Food Satisfaction-------");
+        SolidFood plainOldSolidFood = new SolidFood("Plain Old Solid Food",5,5000,new Date(System.currentTimeMillis()+1000*60*60*24*150),34);
+        System.out.println("Is " + kibble2.getName() + " loved by animals? " + kibble2.isItLovedByAnimals());
+        System.out.println("Is " + kibble.getName() + " loved by animals? " + kibble.isItLovedByAnimals());
+        System.out.println("Is " + scoobySnack.getName() + " loved by animals? " + scoobySnack.isItLovedByAnimals());
+        System.out.println("Is " + whiskas.getName() + " loved by animals? " + whiskas.isItLovedByAnimals());
+        System.out.println("Is " + plainOldSolidFood.getName() + " loved by animals? " + plainOldSolidFood.isItLovedByAnimals());
+
+        System.out.println("\n---------Food Type-------");
+        kibble2.getType();
+        kibble.getType();
+        scoobySnack.getType();
+        whiskas.getType();
+        plainOldSolidFood.getType();
+
+
+
 
 
 

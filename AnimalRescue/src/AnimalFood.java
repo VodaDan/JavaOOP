@@ -17,6 +17,14 @@ public class AnimalFood {
 
     public AnimalFood(){}
 
+    public boolean isItLovedByAnimals() {
+        return true;
+    }
+
+    public void getType(){
+        System.out.println("This food is a combination of solid and wet food.");
+    }
+
     public String getName() {
         return name;
     }
