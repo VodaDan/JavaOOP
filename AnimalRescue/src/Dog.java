@@ -16,6 +16,21 @@ public class Dog extends Animal{
         }
     }
 
+    @Override
+    public void move() {
+        System.out.println("The dog is moving on it's paws");
+    }
+
+    @Override
+    public void reproduce() {
+        System.out.println("The dog gave birth!");
+    }
+
+    @Override
+    public void defend() {
+        System.out.println("The dog bites!");
+    }
+
     public String getSize() {
         return size;
     }

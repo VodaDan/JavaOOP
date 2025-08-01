@@ -23,6 +23,18 @@ public class Animal {
         System.out.println(this.name + " made a sound.");
     }
 
+    public void move() {
+        System.out.println("Animal is moving!");
+    }
+
+    public void reproduce() {
+        System.out.println("Animal is reproducing!");
+    }
+
+    public void defend() {
+        System.out.println("The animal is defending");
+    }
+
     public int getHealthLevel() {
         return healthLevel;
     }

@@ -12,6 +12,21 @@ public class Cat extends Animal{
         System.out.println(this.getName() + " the cat meowed");
     }
 
+    @Override
+    public void move() {
+        System.out.println("The cat is moving on it's paws");
+    }
+
+    @Override
+    public void reproduce() {
+        System.out.println("The cat gave birth!");
+    }
+
+    @Override
+    public void defend() {
+        System.out.println("The cat scratches!");
+    }
+
     public String getFurColor() {
         return furColor;
     }
