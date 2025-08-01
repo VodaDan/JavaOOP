@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
@@ -11,7 +12,7 @@ public class Main {
         RecreationalActivity mousePlay = new RecreationalActivity("Mouse Play");
         Animal cat = new Animal("cat",6,9,10,7,kibble,mousePlay);
         Adopter John = new Adopter("John",5040);
-        Veterinarian Lynda = new Veterinarian("Lynda","Gastro-Intestinal");
+        Veterinarian lynda = new DoctorDigestiveSystem("lynda","Gastro-Intestinal");
 
         /** Assignment Encapsulation */
 
@@ -20,7 +21,7 @@ public class Main {
         RecreationalActivity branchPlay = new RecreationalActivity();
         Animal dog = new Animal();
         Adopter Dave = new Adopter();
-        Veterinarian Louis = new Veterinarian();
+        Veterinarian louis = new DoctorParasites();
 
         //      Setting values
         kibble2.setName("Kibble-Dog");
@@ -42,8 +43,8 @@ public class Main {
         Dave.setName("Dave");
         Dave.setAvailableMoney(6000);
 
-        Louis.setName("Louis");
-        Louis.setSpeciality("Parsites");
+        louis.setName("louis");
+        louis.setSpeciality("Parsites");
 
         /** Assignment Inheritance */
 
@@ -62,6 +63,7 @@ public class Main {
         Dog scoobyTheDog = new Dog("Scooby-Doo",9,10,10,10,scoobySnack,huntGhost,"Big",40);
 
         /** Assignment Polymorphism */
+
         Animal emptyAnimal = new Animal();
 
         System.out.println("\n---------Making sound-------");
@@ -96,6 +98,27 @@ public class Main {
         scoobySnack.getType();
         whiskas.getType();
         plainOldSolidFood.getType();
+
+        /** Assignment Abstraction */
+        System.out.println("\n---------Cleaner-------");
+        Cleaner cleanerJohn = new Cleaner("John", 4800);
+        cleanerJohn.addAnimalToCare(tomTheCat);
+        cleanerJohn.addAnimalToCare(scoobyTheDog);
+        cleanerJohn.work();
+
+        System.out.println("\n---------Feeder-------");
+        Feeder feederMike = new Feeder("Mike", 4900);
+        feederMike.addAnimalToCare(scoobyTheDog);
+        feederMike.addAnimalToCare(bobTheDuck);
+        feederMike.work();
+
+        System.out.println("\n---------DoctorParasites-------");
+        louis.careAnimal(scoobyTheDog);
+
+        System.out.println("\n---------DoctorDigestiveSystem-------");
+        lynda.careAnimal(scoobyTheDog);
+
+
 
 
 

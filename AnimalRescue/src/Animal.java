@@ -90,4 +90,9 @@ public class Animal {
     public void setPrefferedActivity(RecreationalActivity prefferedActivity) {
         this.prefferedActivity = prefferedActivity;
     }
+
+    @Override
+    public String toString(){
+        return this.name;
+    }
 }
