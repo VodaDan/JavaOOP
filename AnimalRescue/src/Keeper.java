@@ -23,6 +23,7 @@ public abstract class Keeper {
 
     public abstract void work();
 
+
     public void addAnimalToCare(Animal animal){
         this.animalsToCare.add(animal);
     }

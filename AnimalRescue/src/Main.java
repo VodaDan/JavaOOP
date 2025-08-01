@@ -100,6 +100,7 @@ public class Main {
         plainOldSolidFood.getType();
 
         /** Assignment Abstraction */
+
         System.out.println("\n---------Cleaner-------");
         Cleaner cleanerJohn = new Cleaner("John", 4800);
         cleanerJohn.addAnimalToCare(tomTheCat);
@@ -117,6 +118,19 @@ public class Main {
 
         System.out.println("\n---------DoctorDigestiveSystem-------");
         lynda.careAnimal(scoobyTheDog);
+
+        /** Assignment Models/Complex data types */
+        System.out.println("\n\n---------Models/Complex data types-------");
+        scoobyTheDog.setMoodLevel(3);
+        System.out.println("Scooby current mood level is: " + scoobyTheDog.getMoodLevel());
+        feederMike.giveSnack(scoobyTheDog,scoobySnack);
+        tomTheCat.setMoodLevel(2);
+        feederMike.giveSnack(tomTheCat,whiskas); // Tom is not assigned to Mike
+        feederMike.addAnimalToCare(tomTheCat);
+        feederMike.giveSnack(tomTheCat,whiskas);
+
+
+
 
 
 
