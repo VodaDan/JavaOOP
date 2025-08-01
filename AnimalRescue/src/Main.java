@@ -13,7 +13,18 @@ public class Main {
         Adopter John = new Adopter("John",5040);
         Veterinarian Lynda = new Veterinarian("Lynda","Gastro-Intestinal");
 
+        /** Assignment Encapsulation */
+
+        //      Recreating Objects with setters.
+        AnimalFood kibble2 = new AnimalFood();
+        RecreationalActivity branchPlay = new RecreationalActivity();
+        Animal dog = new Animal();
+        Adopter Dave = new Adopter();
+        Veterinarian Louis = new Veterinarian();
+
         
+
+
 
     }
 }
