@@ -50,7 +50,7 @@ public class Main {
                 new Date(System.currentTimeMillis()+1000*60*60*24*10),80);
         AnimalFood catFood = new SolidFood("Seaside", 44,500 ,
                 new Date(System.currentTimeMillis()+1000*60*60*24*50),20);
-        SolidFood scoobySnack = new SolidFood("Scooby-Snack",999,1,new Date(System.currentTimeMillis()+1000*60*60*24*90),1)
+        SolidFood scoobySnack = new SolidFood("Scooby-Snack",999,1,new Date(System.currentTimeMillis()+1000*60*60*24*90),1);
         RecreationalActivity swimPlay = new RecreationalActivity("Swimming");
         RecreationalActivity huntGhost = new RecreationalActivity("Ghost Hunting");
 
