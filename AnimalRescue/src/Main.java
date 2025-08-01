@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Main {
@@ -62,6 +63,7 @@ public class Main {
         Dog scoobyTheDog = new Dog("Scooby-Doo",9,10,10,10,scoobySnack,huntGhost,"Big",40);
 
         /** Assignment Polymorphism */
+
         Animal emptyAnimal = new Animal();
 
         System.out.println("\n---------Making sound-------");
@@ -96,6 +98,21 @@ public class Main {
         scoobySnack.getType();
         whiskas.getType();
         plainOldSolidFood.getType();
+
+        /** Assignment Abstraction */
+        System.out.println("\n---------Cleaner-------");
+        Cleaner cleanerJohn = new Cleaner("John", 4800);
+        cleanerJohn.addAnimalToCare(tomTheCat);
+        cleanerJohn.addAnimalToCare(scoobyTheDog);
+        cleanerJohn.work();
+
+        System.out.println("\n---------Feeder-------");
+        Feeder feederMike = new Feeder("Mike", 4900);
+        feederMike.addAnimalToCare(scoobyTheDog);
+        feederMike.addAnimalToCare(bobTheDuck);
+        feederMike.work();
+
+
 
 
 
