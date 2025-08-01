@@ -12,7 +12,7 @@ public class Main {
         RecreationalActivity mousePlay = new RecreationalActivity("Mouse Play");
         Animal cat = new Animal("cat",6,9,10,7,kibble,mousePlay);
         Adopter John = new Adopter("John",5040);
-        Veterinarian Lynda = new Veterinarian("Lynda","Gastro-Intestinal");
+        Veterinarian lynda = new DoctorDigestiveSystem("lynda","Gastro-Intestinal");
 
         /** Assignment Encapsulation */
 
@@ -21,7 +21,7 @@ public class Main {
         RecreationalActivity branchPlay = new RecreationalActivity();
         Animal dog = new Animal();
         Adopter Dave = new Adopter();
-        Veterinarian Louis = new Veterinarian();
+        Veterinarian louis = new DoctorParasites();
 
         //      Setting values
         kibble2.setName("Kibble-Dog");
@@ -43,8 +43,8 @@ public class Main {
         Dave.setName("Dave");
         Dave.setAvailableMoney(6000);
 
-        Louis.setName("Louis");
-        Louis.setSpeciality("Parsites");
+        louis.setName("louis");
+        louis.setSpeciality("Parsites");
 
         /** Assignment Inheritance */
 
@@ -111,6 +111,12 @@ public class Main {
         feederMike.addAnimalToCare(scoobyTheDog);
         feederMike.addAnimalToCare(bobTheDuck);
         feederMike.work();
+
+        System.out.println("\n---------DoctorParasites-------");
+        louis.careAnimal(scoobyTheDog);
+
+        System.out.println("\n---------DoctorDigestiveSystem-------");
+        lynda.careAnimal(scoobyTheDog);
 
 
 

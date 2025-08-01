@@ -1,4 +1,4 @@
-public class Veterinarian {
+public abstract class Veterinarian {
     private String name;
     private String speciality;
 
@@ -6,6 +6,8 @@ public class Veterinarian {
         this.name = name;
         this.speciality = speciality;
     }
+
+    public abstract void careAnimal(Animal animal);
 
     public Veterinarian() {}
 
