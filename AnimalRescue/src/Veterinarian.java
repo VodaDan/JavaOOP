@@ -1,10 +1,15 @@
-public abstract class Veterinarian {
+public abstract class Veterinarian extends Person {
     private String name;
     private String speciality;
 
     public Veterinarian(String name, String speciality) {
         this.name = name;
         this.speciality = speciality;
+    }
+
+    public void checkAppointment(Appointment appointment){
+        System.out.println(this.name + " is checking " + appointment.getAnimal() + ".");
+
     }
 
     public abstract void careAnimal(Animal animal);

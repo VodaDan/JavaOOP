@@ -51,6 +51,11 @@ public class Animal {
 
     }
 
+    public void isAfraid() {
+        this.setMoodLevel(this.moodLevel -7);
+        System.out.println(this.name + " is afraid and his mood level is " + this.getMoodLevel());
+    }
+
     public int getHealthLevel() {
         return healthLevel;
     }

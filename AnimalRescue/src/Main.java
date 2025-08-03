@@ -157,6 +157,14 @@ public class Main {
         littleGirl.adoptAnimal(labradoodle);
         littleGirl.feedAnimal(labradoodle,dogFood);
         labradoodle.setWeight(labradoodle.getWeight() + 6);
+        labradoodle.printStats();
+        littleGirl.playWithPet(labradoodle,branchPlay);
+        littleGirl.playWithPet(labradoodle,walking);
+        Appointment labradoodleCheck = new Appointment(labradoodle);
+        louis.checkAppointment(labradoodleCheck);
+        labradoodle.isAfraid();
+        louis.careAnimal(labradoodle);
+
 
 
 
