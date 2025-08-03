@@ -142,6 +142,9 @@ public class Main {
         feederMike.giveSnack(bobTheDuck,kibble2);
         bobTheDuck.printStats();
 
+        duckLover.feedAnimal(bobTheDuck,kibble);
+
+
 
 
 

@@ -1,5 +1,5 @@
 public class Adopter extends Person {
-    private String name;
+
     private double availableMoney;
 
     public Adopter(String name, double availableMoney) {
