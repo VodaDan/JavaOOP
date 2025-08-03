@@ -1,9 +1,9 @@
 public class Animal {
     private String name;
     private int age;
-    private int healthLevel;
-    private int hungerLevel;
-    private int moodLevel;
+    private int healthLevel; // 0 = low health, 10 = good health
+    private int hungerLevel; // 0 = very hungry, 10 = not hungry
+    private int moodLevel; // 0 = not in a good mood, 10 = happy
     private AnimalFood prefferedFood;
     private RecreationalActivity prefferedActivity;
 
@@ -36,10 +36,18 @@ public class Animal {
     }
 
     public void sleep() {
-        System.out.println(this.name + " is sleeping! Zzzzz");
-        this.moodLevel = this.moodLevel + 2;
-        this.healthLevel = this.healthLevel +1;
-        this.hungerLevel = this.hungerLevel -3;
+        System.out.println(this.name + " is sleeping! Zzzzz \n");
+        this.setMoodLevel(this.moodLevel + 2);
+        this.setHealthLevel(this.healthLevel + 1);
+        this.setHungerLevel(this.hungerLevel - 3);
+    }
+
+    public void printStats(){
+        System.out.println(this.name + " stats are following ---");
+        System.out.println("Health level: " + this.healthLevel);
+        System.out.println("Hunger level: " + this.hungerLevel);
+        System.out.println("Mood level: " + this.moodLevel + "\n");
+
     }
 
     public int getHealthLevel() {

@@ -1,4 +1,4 @@
-public class Adopter {
+public class Adopter extends Person {
     private String name;
     private double availableMoney;
 
@@ -8,6 +8,7 @@ public class Adopter {
     }
 
     public void playWithPet(Animal animal, RecreationalActivity activity){
+        int initialMood = animal.getMoodLevel();
         if(animal.getPrefferedActivity().getName().equals(activity.getName())) {
             animal.setMoodLevel(animal.getMoodLevel()+4);
             animal.setHungerLevel(animal.getHungerLevel() - 2);
@@ -15,7 +16,10 @@ public class Adopter {
             animal.setMoodLevel(animal.getMoodLevel() +3);
             animal.setHungerLevel(animal.getHungerLevel() - 1);
         }
+        System.out.println(this.name + " spent time("+activity.getName()+") with "+animal.getName()+", incresing mood level from "+ initialMood + " to " +animal.getMoodLevel());
     }
+
+
 
     public Adopter(){}
 

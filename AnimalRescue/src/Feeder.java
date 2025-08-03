@@ -22,12 +22,10 @@ public class Feeder extends Keeper {
             int aux = animal.getMoodLevel();
             if (animal.getClass().equals(Dog.class) && food.getName().equals("Scooby-Snack")) {
                 animal.setMoodLevel(animal.getMoodLevel() + 5);
+                animal.setHungerLevel(animal.getHungerLevel() + 1);
             } else {
                 animal.setMoodLevel(animal.getMoodLevel() + 3);
-            }
-
-            if (animal.getMoodLevel() > 10) {
-                animal.setMoodLevel(10);
+                animal.setHungerLevel(animal.getHungerLevel() + 2);
             }
             System.out.println(animal.getName() + " mood level was " + aux + " and after snacking it is " + animal.getMoodLevel() + ".");
 

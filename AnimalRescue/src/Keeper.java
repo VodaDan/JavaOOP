@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.UUID;
 
-public abstract class Keeper {
+public abstract class Keeper extends Person {
     private String name;
     private UUID id;
     private double salary;

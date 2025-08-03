@@ -120,6 +120,7 @@ public class Main {
         lynda.careAnimal(scoobyTheDog);
 
         /** Assignment Models/Complex data types */
+
         System.out.println("\n\n---------Models/Complex data types-------");
         scoobyTheDog.setMoodLevel(3);
         System.out.println("Scooby current mood level is: " + scoobyTheDog.getMoodLevel());
@@ -128,6 +129,18 @@ public class Main {
         feederMike.giveSnack(tomTheCat,whiskas); // Tom is not assigned to Mike
         feederMike.addAnimalToCare(tomTheCat);
         feederMike.giveSnack(tomTheCat,whiskas);
+
+        System.out.println("\n\n---------Playing with pets-------");
+        Adopter duckLover = new Adopter("Ion",8000);
+        bobTheDuck.printStats();
+        bobTheDuck.sleep();
+        bobTheDuck.printStats();
+        bobTheDuck.setMoodLevel(3);
+        bobTheDuck.setHealthLevel(2);
+        duckLover.playWithPet(bobTheDuck,swimPlay);
+        bobTheDuck.printStats();
+        feederMike.giveSnack(bobTheDuck,kibble2);
+        bobTheDuck.printStats();
 
 
 
