@@ -43,7 +43,7 @@ public class Main {
         Dave.setName("Dave");
         Dave.setAvailableMoney(6000);
 
-        louis.setName("louis");
+        louis.setName("Louis");
         louis.setSpeciality("Parsites");
 
         /** Assignment Inheritance */
@@ -150,11 +150,12 @@ public class Main {
         RecreationalActivity walking = new RecreationalActivity("Walk in the park");
         Dog labradoodle = new Dog("Max","Mixed-Breed Labrador",2,5,2,2,
                 kibble,walking,"Big",15);
-        AnimalFood dogFood = new SolidFood("Dog Food(High Calorie)",45,250,
+        SolidFood dogFood = new SolidFood("Dog Food(High Calorie)",45,250,
                 new Date(System.currentTimeMillis()+1000*60*60*24*90),0);
         Adopter littleGirl = new Adopter("Ana",500);
 
         littleGirl.adoptAnimal(labradoodle);
+        littleGirl.buyFood(dogFood,5);
         littleGirl.feedAnimal(labradoodle,dogFood);
         labradoodle.setWeight(labradoodle.getWeight() + 6);
         labradoodle.printStats();
@@ -162,8 +163,17 @@ public class Main {
         littleGirl.playWithPet(labradoodle,walking);
         Appointment labradoodleCheck = new Appointment(labradoodle);
         louis.checkAppointment(labradoodleCheck);
+        labradoodleCheck.setMedication("Vaccine and anti-parasitic spray");
         labradoodle.isAfraid();
+        louis.petAnimal(labradoodle);
         louis.careAnimal(labradoodle);
+        labradoodle.isAfraid();
+        louis.petAnimal(labradoodle);
+
+        WetFood dogWetFood = new WetFood(" Dog Wet Food(High Calorie)",85,575,
+                new Date(System.currentTimeMillis()+1000*60*60*24*20),0);
+
+
 
 
 

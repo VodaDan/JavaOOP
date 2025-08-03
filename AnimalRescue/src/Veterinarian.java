@@ -1,5 +1,4 @@
 public abstract class Veterinarian extends Person {
-    private String name;
     private String speciality;
 
     public Veterinarian(String name, String speciality) {

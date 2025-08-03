@@ -10,6 +10,7 @@ public class Adopter extends Person {
         this.name = name;
         this.availableMoney = availableMoney;
         this.adoptedAnimal = new ArrayList<>();
+        this.animalFoodStock = new ArrayList<>();
     }
 
     public void playWithPet(Animal animal, RecreationalActivity activity){
