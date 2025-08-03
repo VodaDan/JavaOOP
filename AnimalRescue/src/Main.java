@@ -144,6 +144,22 @@ public class Main {
 
         duckLover.feedAnimal(bobTheDuck,kibble);
 
+        /** Assignment Animal rescue project */
+
+        System.out.println("\n\n---------Animal rescue project-------");
+        RecreationalActivity walking = new RecreationalActivity("Walk in the park");
+        Dog labradoodle = new Dog("Max","Mixed-Breed Labrador",2,5,2,2,
+                kibble,walking,"Big",15);
+        AnimalFood dogFood = new SolidFood("Dog Food(High Calorie)",45,250,
+                new Date(System.currentTimeMillis()+1000*60*60*24*90),0);
+        Adopter littleGirl = new Adopter("Ana",500);
+
+        littleGirl.adoptAnimal(labradoodle);
+        littleGirl.feedAnimal(labradoodle,dogFood);
+        labradoodle.setWeight(labradoodle.getWeight() + 6);
+
+
+
 
 
 

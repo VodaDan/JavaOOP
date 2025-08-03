@@ -6,6 +6,7 @@ public class Animal {
     private int moodLevel; // 0 = not in a good mood, 10 = happy
     private AnimalFood prefferedFood;
     private RecreationalActivity prefferedActivity;
+    private boolean isAdopted;
 
     public Animal(String name, int age, int healthLevel, int hungerLevel, int moodLevel,
                   AnimalFood prefferedFood, RecreationalActivity prefferedActivity) {
@@ -119,6 +120,14 @@ public class Animal {
 
     public void setPrefferedActivity(RecreationalActivity prefferedActivity) {
         this.prefferedActivity = prefferedActivity;
+    }
+
+    public boolean isAdopted() {
+        return isAdopted;
+    }
+
+    public void setAdopted(boolean adopted) {
+        isAdopted = adopted;
     }
 
     @Override

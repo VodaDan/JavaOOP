@@ -1,11 +1,19 @@
 public class Dog extends Animal{
     private String size;
     private int weight;
+    private String breed;
 
     public Dog(String name, int age, int healthLevel, int hungerLevel, int moodLevel, AnimalFood prefferedFood, RecreationalActivity prefferedActivity, String size, int weight) {
         super(name, age, healthLevel, hungerLevel, moodLevel, prefferedFood, prefferedActivity);
         this.size = size;
         this.weight = weight;
+    }
+
+    public Dog(String name,String breed, int age, int healthLevel, int hungerLevel, int moodLevel, AnimalFood prefferedFood, RecreationalActivity prefferedActivity, String size, int weight) {
+        super(name, age, healthLevel, hungerLevel, moodLevel, prefferedFood, prefferedActivity);
+        this.size = size;
+        this.weight = weight;
+        this.breed = breed;
     }
 
     public void makeSound(){
@@ -29,6 +37,14 @@ public class Dog extends Animal{
     @Override
     public void defend() {
         System.out.println("The dog bites!");
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String race) {
+        this.breed = race;
     }
 
     public String getSize() {
