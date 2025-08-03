@@ -7,6 +7,16 @@ public class Adopter {
         this.availableMoney = availableMoney;
     }
 
+    public void playWithPet(Animal animal, RecreationalActivity activity){
+        if(animal.getPrefferedActivity().getName().equals(activity.getName())) {
+            animal.setMoodLevel(animal.getMoodLevel()+4);
+            animal.setHungerLevel(animal.getHungerLevel() - 2);
+        } else {
+            animal.setMoodLevel(animal.getMoodLevel() +3);
+            animal.setHungerLevel(animal.getHungerLevel() - 1);
+        }
+    }
+
     public Adopter(){}
 
     public String getName() {
