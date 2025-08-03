@@ -155,8 +155,10 @@ public class Main {
         Adopter littleGirl = new Adopter("Ana",500);
 
         littleGirl.adoptAnimal(labradoodle);
-        littleGirl.buyFood(dogFood,5);
+        littleGirl.buyFood(dogFood,1);
         littleGirl.feedAnimal(labradoodle,dogFood);
+        littleGirl.feedAnimal(labradoodle,dogFood);
+        littleGirl.getAnimalFoodStock();
         labradoodle.setWeight(labradoodle.getWeight() + 6);
         labradoodle.printStats();
         littleGirl.playWithPet(labradoodle,branchPlay);
@@ -172,8 +174,13 @@ public class Main {
 
         WetFood dogWetFood = new WetFood(" Dog Wet Food(High Calorie)",85,575,
                 new Date(System.currentTimeMillis()+1000*60*60*24*20),0);
+        SolidFood lowCalorieDogFood = new SolidFood("Low Calorie Dog Food",90,500,
+                new Date(System.currentTimeMillis()+1000*60*60*24*40),0);
 
-
+        littleGirl.buyFood(dogWetFood,2);
+        littleGirl.feedAnimal(labradoodle,dogWetFood);
+        labradoodle.setWeight(labradoodle.getWeight() + 10);
+        littleGirl.buyFood(lowCalorieDogFood,4);
 
 
 
