@@ -176,11 +176,29 @@ public class Main {
                 new Date(System.currentTimeMillis()+1000*60*60*24*20),0);
         SolidFood lowCalorieDogFood = new SolidFood("Low Calorie Dog Food",90,500,
                 new Date(System.currentTimeMillis()+1000*60*60*24*40),0);
+        RecreationalActivity ballPlay = new RecreationalActivity("Playing with the ball");
 
         littleGirl.buyFood(dogWetFood,2);
         littleGirl.feedAnimal(labradoodle,dogWetFood);
         labradoodle.setWeight(labradoodle.getWeight() + 10);
         littleGirl.buyFood(lowCalorieDogFood,4);
+
+        System.out.println("----Ana's routine with Max----");
+        littleGirl.wakeUp();
+        littleGirl.feedAnimal(labradoodle,lowCalorieDogFood);
+        littleGirl.playWithPet(labradoodle,walking);
+        labradoodle.sleep();
+        littleGirl.work();
+        labradoodle.wakeUp();
+        littleGirl.playWithPet(labradoodle, ballPlay);
+        littleGirl.playWithPet(labradoodle,walking);
+        littleGirl.feedAnimal(labradoodle,lowCalorieDogFood);
+        labradoodle.printStats();
+        labradoodle.sleep();
+
+
+
+
 
 
 

@@ -24,6 +24,14 @@ public class Adopter extends Person {
         System.out.println(this.name + " spent time("+activity.getName()+") with "+animal.getName()+", incresing mood level from "+ initialMood + " to " +animal.getMoodLevel());
     }
 
+    public void wakeUp() {
+        System.out.println(this.name + " woke up!");
+    }
+
+    public void work() {
+        System.out.println(this.name + " is working!");
+    }
+
 
 
     public void adoptAnimal(Animal animal) {
